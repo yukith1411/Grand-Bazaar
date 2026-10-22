@@ -1,0 +1,131 @@
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.checkout-section-box {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-light);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 30px;
+}
+
+.checkout-box-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 12px;
+}
+
+/* Address List Grid */
+.checkout-address-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.checkout-address-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+.checkout-address-card:hover {
+  border-color: var(--text-primary);
+}
+
+.checkout-address-card.selected {
+  border-color: var(--primary);
+  background-color: rgba(255, 71, 87, 0.03);
+}
+
+.address-check-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+/* Payment Selector Option cards */
+.payment-methods-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-method-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.payment-method-card:hover {
+  border-color: var(--text-primary);
+}
+
+.payment-method-card.selected {
+  border-color: var(--primary);
+  background-color: rgba(255, 71, 87, 0.03);
+}
+
+.payment-radio {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+}
+
+/* Item breakdown right panel */
+.checkout-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 20px;
+}
+
+.checkout-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.checkout-item-qty {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-left: 6px;
+}
+
+/* Responsive checkout */
+@media (max-width: 992px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .checkout-address-grid {
+    grid-template-columns: 1fr;
+  }
+}

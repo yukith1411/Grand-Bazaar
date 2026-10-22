@@ -1,0 +1,83 @@
+.profile-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+/* Tab columns selector list */
+.profile-tabs-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 20px 0;
+  box-shadow: var(--shadow-sm);
+  height: fit-content;
+}
+
+.profile-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+  text-align: left;
+}
+
+.profile-tab-btn:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+}
+
+.profile-tab-btn.active {
+  color: var(--primary);
+  border-left: 4px solid var(--primary);
+  background-color: rgba(255, 71, 87, 0.05);
+}
+
+/* Tab Panels Content */
+.profile-content-panel {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-light);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-panel-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 12px;
+}
+
+/* Addresses block */
+.address-manager-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-bottom: 16px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: var(--transition-fast);
+}
+
+.address-manager-card:hover {
+  border-color: var(--text-primary);
+}
+
+/* Responsive Profile */
+@media (max-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
